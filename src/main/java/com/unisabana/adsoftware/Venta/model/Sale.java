@@ -34,4 +34,9 @@ public class Sale {
         Sale sale = (Sale) o;
         return id == sale.id && documentClient == sale.documentClient && totalAmount == sale.totalAmount && Objects.equals(dateCreated, sale.dateCreated);
     }
+    @Override
+    public String toString() {
+        return documentClient + " " + totalAmount + " " + dateCreated;
+     }
+
 }
