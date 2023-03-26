@@ -2,6 +2,7 @@ package com.unisabana.software.tienda.service;
 
 import com.unisabana.software.tienda.controller.dto.SaleDTO;
 
+import java.sql.Date;
 import java.util.List;
 
 public interface SaleService {
@@ -16,4 +17,6 @@ public interface SaleService {
     List<SaleDTO> findByDocumentClient(int documentClient);
 
     List<SaleDTO> findAll();
+
+    List<SaleDTO> findByDocumentClientAndDateCreated(int documentClient, Date valueOf);
 }
