@@ -1,12 +1,12 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '2.7.9'
-	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'org.springframework.boot' version '3.0.5'
+	id 'io.spring.dependency-management' version '1.1.0'
 }
 
-group = 'com.unisabana.adsoftware.'
+group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-
+sourceCompatibility = '17'
 
 configurations {
 	compileOnly {
@@ -19,21 +19,12 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-
-	implementation 'org.xerial:sqlite-jdbc:3.40.1.0'
-	implementation 'mysql:mysql-connector-java:8.0.32'
-	implementation 'org.ops4j.pax.jdbc:pax-jdbc-mysql:1.5.5'
-
 }
 
 tasks.named('test') {
