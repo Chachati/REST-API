@@ -29,4 +29,10 @@ public class ProductController {
     public String Sale(@RequestParam  ProductDTO products) {
         return ("se vendio tanto");
     }
+
+    @GetMapping("/product/transactions/")
+    public void Transactions(@RequestParam int code,
+                             @RequestParam int stock) {
+        productDB.update(stock, code);
+    }
 }

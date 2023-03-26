@@ -1,2 +1,4 @@
-package com.unisabana.adsoftware.Venta.service;public interface ICrudRepository {
+package com.unisabana.adsoftware.Venta.service;
+
+public interface ICrudRepository {
 }
