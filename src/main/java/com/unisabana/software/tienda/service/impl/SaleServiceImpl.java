@@ -6,6 +6,7 @@ import com.unisabana.software.tienda.service.SaleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -62,5 +63,10 @@ public class SaleServiceImpl implements SaleService {
     @Override
     public List<SaleDTO> findAll() {
         return saleRepository.findAll();
+    }
+
+    @Override
+    public List<SaleDTO> findByDocumentClientAndDateCreated(int documentClient, Date valueOf) {
+        return null;
     }
 }
