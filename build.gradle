@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.unisabana.adsoftware.'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+
 
 configurations {
 	compileOnly {
@@ -25,6 +25,15 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	implementation 'org.xerial:sqlite-jdbc:3.40.1.0'
+	implementation 'mysql:mysql-connector-java:8.0.32'
+	implementation 'org.ops4j.pax.jdbc:pax-jdbc-mysql:1.5.5'
+
 }
 
 tasks.named('test') {
