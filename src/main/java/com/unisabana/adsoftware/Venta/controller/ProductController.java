@@ -35,5 +35,10 @@ public class ProductController {
         List <Sale> sales = (List<Sale>) repository.findAll();
         return sales;
     }
+    @GetMapping("/product/transaction/searchbyid/{ID}")
+    public List <Sale> TransactionSearchById(@PathVariable("ID") int documentClient) {
+        List <Sale> sales = (List<Sale>) repository.findBydocumentClient(documentClient);
+        return sales;
+    }
 
 }
